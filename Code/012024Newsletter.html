@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Insight HTML Email Template</title>
+<title>Broker Email Template</title>
 <style type="text/css">
 
 
@@ -114,7 +114,7 @@
         display:flex; 
         align-items: center; 
         justify-content: space-around; 
-        padding:10px;
+        padding:5px 20px;
     } 
 
 
@@ -158,18 +158,28 @@
     }
 
     .two-columns .content, .one-column .content {
-        font-size: 16px;
+        font-size: 14px;
         text-align: left;
         
     }
 
+    .one-column .content {
+        margin: 0 auto;
+    }
+
     #FAQ .content, #SM .content {
         text-align:center;
+        width: 300px;
+        margin: 0 auto!important;
+    }
+
+    #FAQ {
+        padding: 0;
     }
 
     #SM {
         padding-top: 0px!important;
-        padding-left: 40px;
+
     }
 
     /* BUTTONS */
@@ -193,6 +203,7 @@
         }
     button:hover {
         color: #9e3223;
+        cursor:pointer;
     }
 
     button::after {
@@ -269,9 +280,24 @@
         border-radius: 2px;
     }
 
+    .firstandlast {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .firstandlast label, input {
+        padding: 10px;
+        text-align: left;
+        display:flex;
+        flex-direction: column;
+    }
 
     /* RESPONSIVE DESIGN */
     @media screen and (max-width:600px){
+        .main {
+            max-width:300px!important;
+            width: 300px;
+        }
         .two-columns, .one-column{
         padding:0px!important;
         }
@@ -286,8 +312,9 @@
         padding-left:0!important;
         padding-top:10px!important;
         padding-bottom:10px!important;
+        
         }
-        .articleimg, .employeeimg {
+        .articleimg, .employeeimg, .headerbg {
         width: 300px!important;
         height: 200px!important;
         max-width: 300px!important;
@@ -297,39 +324,43 @@
         .two-columns .column {
         width: 100%!important;
         max-width: 300px!important;
-        padding: 0!important;
-        }
-
-        .two-columns .content{
-            padding: 0px 10px;
-            margin: -10px auto;
+        padding: 10px 0!important;
+        
         }
 
         #FAQ {
-            padding:10px!important;
+        padding: 10px 0!important;
+        margin: 0 auto!important;
+        
+        }
 
+        
+        #SM{
+
+        padding: 10px 0!important;
+        height:fit-content!important;
         }
 
         .one-column .column {
         width: 100%!important;
         max-width: 300px!important;
-        padding: 0!important;
+        padding: 10px 0!important;
         }
         .button_3{
             padding:10px!important;
             height: 50px!important;
             width:50px!important;
         }
-        #SM{
-        padding: 40px!important;
-        height:fit-content!important;
-        }
+        
         .SM-icons{
         display:flex; 
         flex-direction: column;
         align-items: center; 
         padding:10px;
         } 
+        .hr {
+            text-align:center!important;
+        }
     }
 
     </style>
@@ -376,7 +407,7 @@
                 
                 <tr>
                 <td class="textbanner" style="text-align: center;">
-                    <p style="color:white;">Issue Date</p>
+                    <p style="color:white;">January 2024</p>
                 </td>
                 </tr>
 
@@ -387,8 +418,7 @@
 
     <!-- ARTICLES -->
 
-    <!--Odd # Article IMG on top-->
-    <!-- Not Necessary for this one
+    <!--Odd # Article IMG on top
         <tr>
             <td>
             <table role="presentation" border="0" cellspacing="0" width="100%" >
@@ -398,7 +428,7 @@
                     <tr>
                         <td class="padding">
                         <table class="content" border="0">
-                            <!--IMG-
+                            <!--IMG
                             <tr>
                             <td>
                                 <a href="#"><img src="img/ATXSkylineHero.jpeg"
@@ -440,10 +470,10 @@
             </table>
             </td>
         </tr>
-    -->
 
+        ->
 
-    <!-- TWO COLUMN SECTION ROW 1-->
+    <!--ROW 1 -->
         <tr>
             <td>
             <table role="presentation" border="0" cellspacing="0" width="100%">
@@ -459,8 +489,8 @@
                             <!--IMG-->
                             <tr>
                             <td>
-                                <a href="https://www.youtube.com/watch?v=aBcstJIqbSw"><img class="articleimg" src="Code/img/012024/SA_AngelTree.png"
-                                    alt="Angel Tree Video Still" width="260px" style="max-width:260px;"></a>
+                                <a href="https://www.youtube.com/watch?v=aBcstJIqbSw"><img class="articleimg" src="https://healthc2u.com/wp-content/uploads/2024/01/SA_AngelTree-1.png"
+                                    alt="" width="260px" style="max-width:260px;"></a>
                             </td>
                             </tr>
 
@@ -469,8 +499,8 @@
                             <td>
                                 <table role="presentation" border="0" cellspacing="0" width="100%">
                                 <tr>
-                                    <td class="subject"><h5 style="color:#9e3223">Subject</h5></td>
-                                    <td style="text-align:right"><h6>Read Time</h6></td>
+                                    <td class="subject"><h5 style="color:#9e3223">Giving Back</h5></td>
+                                    <td style="text-align:right"><h6>1 min</h6></td>
                                 </tr>
                                 </table>
                             </td>
@@ -480,14 +510,14 @@
                             <tr>
                             <td>
                                 <h4>Salvation Army Angel Tree Video</h4>
-                                <p style="padding-bottom:15px;">This past Christmas, Healthcare2U was honored to have donated toys to the Salvation Army for their Annual Angel Tree Donation. The company adopted 75 angels and 10 toy tags and was featured on Fox 7 NEWS.</p>
+                                <p style="padding-bottom:15px;">This past Christmas, Healthcare2U was honored to have donated toys to the Salvation Army for 	their Annual Angel Tree Donation. The company adopted 75 angels and 10 toy tags and was featured on Fox 7 NEWS.</p>
                             </td>
                             </tr>
 
                             <!--Button-->
                             <tr class="hr" >
                                 <td>
-                                    <button class="grow_box"><a style="color:white" href="https://www.youtube.com/watch?v=aBcstJIqbSw">Learn More</a></button>
+                                    <a href="https://www.youtube.com/watch?v=aBcstJIqbSw"><button class="grow_box">Learn More</button></a>
                                 </td>
                             </tr>
                         </table>
@@ -505,7 +535,7 @@
                             <!--IMG-->
                             <tr>
                                 <td>
-                                    <a href="#"><img class="articleimg" src="https://dummyimage.com/300x200/000/5c5d61"
+                                    <a href="https://healthc2u.com/customizable-benefit-solutions-can-deliver-impressive-cost-savings/"><img class="articleimg" src="https://healthc2u.com/wp-content/uploads/2023/07/cooperation-analyst-chart-professional-paper-economics-scaled-e1689263052824.jpg"
                                     alt="" width="260px" style="max-width:260px;"></a>
                                 </td>
                             </tr>
@@ -515,8 +545,8 @@
                                 <td>
                                 <table role="presentation" border="0" cellspacing="0" width="100%">
                                     <tr>
-                                    <td class="subject"><h5 style="color:#9e3223">Subject</h5></td>
-                                    <td style="text-align:right"><h6>Read Time</h6></td>
+                                    <td class="subject"><h5 style="color:#9e3223">Benefit solutions</h5></td>
+                                    <td style="text-align:right"><h6>1 min</h6></td>
                                     </tr>
                                 </table>
                                 </td>
@@ -525,15 +555,15 @@
                             <!--Title & Description-->
                             <tr>
                                 <td>
-                                <h4>Title</h4>
-                                <p style="padding-bottom:15px;">Description</p>
+                                <h4>Customizable Benefit Solutions can deliver impressive cost savings</h4>
+                                <p style="padding-bottom:15px;">In the November issue of America’s Benefit Specialist Magazine, President and CEO, Andy Bonner, discusses in an article, ‘how customizable solutions can deliver impressive cost savings.'</p>
                                 </td>
                             </tr>
     
                             <!--Button-->
                             <tr class="hr" >
                                 <td>
-                                    <button class="grow_box"><a style="color:white" href="">Learn More</a></button>
+                                    <a href="https://healthc2u.com/customizable-benefit-solutions-can-deliver-impressive-cost-savings/"><button class="grow_box">Learn More</button></a>
                                 </td>
                             </tr>
                         </table>
@@ -547,119 +577,119 @@
             </td>
         </tr>
 
+        <!-- ROW 2 -->
+        <tr>
+            <td>
+            <table role="presentation" border="0" cellspacing="0" width="100%">
+                <tr>
+                <td class="two-columns">
+
+                    <!-- Article 3 (if even # articles)-->
+                    <table class="column">
+                    <tr>
+                        <td class="padding">
+                        <table class="content" border="0" width="100%">
+
+                            <!--IMG-->
+                            <tr>
+                            <td>
+                                <a href="#"><img class="articleimg" src="https://healthc2u.com/wp-content/uploads/2023/08/happy-cheerful-african-american-family-dad-daughter-having-fun-cuddle-play-sofa-while-birthday-house-scaled-e1693230101384.jpg"
+                                    alt="" width="260px" style="max-width:260px;"></a>
+                            </td>
+                            </tr>
+
+                            <!--Subject + Read Time-->
+                            <tr>
+                            <td>
+                                <table role="presentation" border="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <td class="subject"><h5 style="color:#9e3223">DPCadvantage</h5></td>
+                                    <td style="text-align:right"><h6>1 min</h6></td>
+                                </tr>
+                                </table>
+                            </td>
+                            </tr>
+
+                            <!--Title & Description-->
+                            <tr>
+                            <td>
+                                <h4>Healthcare2U’s Direct Primary Care Advantage, a Zero Dollar Visit Fee Membership for Access to Nationwide Healthcare</h4>
+                                <p style="padding-bottom:15px;">Healthcare2U is excited to announce its new Direct Primary Care advantage, a membership that features a zero-dollar office fee. Learn how employers are able to contain their costs by 	eliminating claims from major medical insurance plans.</p>
+                            </td>
+                            </tr>
+
+                            <!--Button-->
+                            <tr class="hr" >
+                                <td>
+                                    <a href="#"><button class="grow_box">Learn More</button></a>
+                                </td>
+                            </tr>
+                        </table>
+                        </td>
+                        </tr>
+                    </table>
+                    <!-- End of Article 3-->
+
+                    <!-- Article 4-->
+                    <table class="column" >
+                        <tr>
+                        <td class="padding">
+                            <table class="content" border="0">
+    
+                            <!--IMG-->
+                            <tr>
+                                <td>
+                                    <a href="https://www.kevinmd.com/post-author/andy-bonner"><img class="articleimg" src="https://healthc2u.com/wp-content/uploads/2023/03/women-standing-outside-of-hospital-scaled.jpg"
+                                    alt="" width="260px" style="max-width:260px;"></a>
+                                </td>
+                            </tr>
+    
+                            <!--Subject + Read Time-->
+                            <tr>
+                                <td>
+                                <table role="presentation" border="0" cellspacing="0" width="100%">
+                                    <tr>
+                                    <td class="subject"><h5 style="color:#9e3223">DPC</h5></td>
+                                    <td style="text-align:right"><h6>2 min</h6></td>
+                                    </tr>
+                                </table>
+                                </td>
+                            </tr>
+    
+                            <!--Title & Description-->
+                            <tr>
+                                <td>
+                                <h4>The Rise of Direct Primary Care in America</h4>
+                                <p style="padding-bottom:15px;">Healthcare2U’s own, Andy Bonner, opened the new year by sharing how direct primary 	care has revolutionized the American healthcare landscape. As featured in the latest 	article on KevinMD.com, DPC has had a remarkable annual growth rate as it challenges 	traditional healthcare models. Learn how direct primary care can improve the way Americans access and experience health care.</p>
+                                </td>
+                            </tr>
+    
+                            <!--Button-->
+                            <tr class="hr" >
+                                <td>
+                                    <a href="https://www.kevinmd.com/post-author/andy-bonner"><button class="grow_box">Learn More</button></a>
+                                </td>
+                            </tr>
+                        </table>
+                        </td>
+                        </tr>
+                    </table>
+                        <!-- End of Article 4-->
+                    </td>
+                </tr>
+            </table>
+            </td>
+        </tr>
     <!--Here is where you would copy & paste the next set of articles from above-->
 
-    <!-- TWO COLUMN SECTION ROW 2-->
-    <tr>
-        <td>
-        <table role="presentation" border="0" cellspacing="0" width="100%">
-            <tr>
-            <td class="two-columns">
-
-                <!-- Article 1 (if even # articles)-->
-                <table class="column">
-                <tr>
-                    <td class="padding">
-                    <table class="content" border="0" width="100%">
-
-                        <!--IMG-->
-                        <tr>
-                        <td>
-                            <a href="#"><img class="articleimg" src="https://dummyimage.com/300x200/000/5c5d61"
-                                alt="" width="260px" style="max-width:260px;"></a>
-                        </td>
-                        </tr>
-
-                        <!--Subject + Read Time-->
-                        <tr>
-                        <td>
-                            <table role="presentation" border="0" cellspacing="0" width="100%">
-                            <tr>
-                                <td class="subject"><h5 style="color:#9e3223">Subject</h5></td>
-                                <td style="text-align:right"><h6>Read Time</h6></td>
-                            </tr>
-                            </table>
-                        </td>
-                        </tr>
-
-                        <!--Title & Description-->
-                        <tr>
-                        <td>
-                            <h4>Title</h4>
-                            <p style="padding-bottom:15px;">Description</p>
-                        </td>
-                        </tr>
-
-                        <!--Button-->
-                        <tr class="hr" >
-                            <td>
-                                <button class="grow_box"><a style="color:white" href="">Learn More</a></button>
-                            </td>
-                        </tr>
-                    </table>
-                    </td>
-                    </tr>
-                </table>
-                <!-- End of Article 1-->
-
-                <!-- Article 2-->
-                <table class="column" >
-                    <tr>
-                    <td class="padding">
-                        <table class="content" border="0">
-
-                        <!--IMG-->
-                        <tr>
-                            <td>
-                                <a href="#"><img class="articleimg" src="https://dummyimage.com/300x200/000/5c5d61"
-                                alt="" width="260px" style="max-width:260px;"></a>
-                            </td>
-                        </tr>
-
-                        <!--Subject + Read Time-->
-                        <tr>
-                            <td>
-                            <table role="presentation" border="0" cellspacing="0" width="100%">
-                                <tr>
-                                <td class="subject"><h5 style="color:#9e3223">Subject</h5></td>
-                                <td style="text-align:right"><h6>Read Time</h6></td>
-                                </tr>
-                            </table>
-                            </td>
-                        </tr>
-
-                        <!--Title & Description-->
-                        <tr>
-                            <td>
-                            <h4>Title</h4>
-                            <p style="padding-bottom:15px;">Description</p>
-                            </td>
-                        </tr>
-
-                        <!--Button-->
-                        <tr class="hr" >
-                            <td>
-                                <button class="grow_box"><a style="color:white" href="">Learn More</a></button>
-                            </td>
-                        </tr>
-                    </table>
-                    </td>
-                    </tr>
-                </table>
-                    <!-- End of Article 2-->
-                </td>
-            </tr>
-        </table>
-        </td>
-    </tr>
 
 
     <!--EMPLOYEE SPOTLIGHT SECTION-->
-        <tr>
+        <tr >
         <td style="padding-top:20px">
-            <table width="100%" >
-            <tr >
-                <td >
+            <table width="100%">
+            <tr>
+                <td>
                     <table width="570px" style="margin:0 auto; ">
                         <tr>
                             <td class="textbanner" style="text-align: center;">
@@ -719,7 +749,7 @@
                         <td class="one-column">
                             <table class="column" border="0" style="max-width: 560px;" >
                                 <tr>
-                                    <td class="padding" style="padding:0 65px">
+                                    <td class="padding" width="600px">
                                         <table class="content" style="text-align:center;" >
                                             <tr>
                                                 <td>
@@ -756,14 +786,18 @@
                     <tr>
                         <td class="two-columns">
                             <!--FAQ-->
-                            <table class="column" id="FAQ" style="background-color: #15345a; height:250px" border="0">
+                            <table class="column" id="FAQ" style="background-color: #15345a; height:250px;" border="0">
                                 <tr>
                                 <td class="padding" style="padding-top:15px">
-                                    <table class="content">
+                                    <table class="content" style="padding:0 25px">
                                     <tr>
                                         <td style="color:white">
                                             <h4>Not sure what Direct Primary Care is?</h4>
-                                            <br>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="color:white">
+                                            <p style="color:white;">Check out our FAQ</p>
                                         </td>
                                     </tr>
                                     <!--Button-->
@@ -780,34 +814,34 @@
                         
                             
                             <!--SM-->
-                            <table class="column" id="SM" style="background-color: #95D4D0; height:250px" border="0" >
+                            <table class="column" id="SM" style="background-color: #95D4D0; height:250px; padding: 0!important;" border="0" >
                                 <tr>
                                     <td class="padding" style="padding-top:0px">
-                                        <table class="content" width="100%">
-                                            <tr>
+                                        <table class="content" style="padding:0 25px">
+                                            <tr >
                                                 <td>
-                                                    <h4 style="color:#15345A; margin-bottom:0">Join the conversation</h4>
+                                                    <h4 style="color:#15345A;">Join the conversation</h4>
                                                     <p style="color:#15345A;">Visit us on the web</p>
                                                     <tr class="hr" style="text-align: center;">
                                                         <td>
-                                                            <button class="grow_box">Our Website</button>
+                                                            <a href="https://healthc2u.com/"><button class="grow_box">Our Website</button></a>
                                                         </td>
                                                     </tr>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <p style="line-height:10px; color:#15345A">Follow us on social media</p>
+                                                    <p style="line-height:10px; color:#15345A;">Follow us on social media</p>
                                                 </td>
                                             </tr>
                                             <!--Links-->
                                             <tr style="text-align:center; padding: 0px;">
                                                 <td class="SM-icons">
-                                                    <a href=""><img class="button_3" src="img/SM-Icons-large/LinkedIn.png" alt="LinkedIn" width="30"></a>
-                                                    <a href=""><img class="button_3" src="img/SM-Icons-large/FB.png" alt="Facebook" width="30"></a>
-                                                    <a href=""><img class="button_3" src="img/SM-Icons-large/Insta.png" alt="Instagram" width="30"></a>
-                                                    <a href=""><img class="button_3" src="img/SM-Icons-large/Twitter.png" alt="Twitter" width="30"></a>
-                                                    <a href=""><img class="button_3"src="img/SM-Icons-large/YT.png" alt="Youtube" width="30"></a>
+                                                    <a href="https://www.linkedin.com/company/3520240/admin/"><img class="button_3" src="img/SM-Icons-large/LinkedIn.png" alt="LinkedIn" width="30"></a>
+                                                    <a href="https://www.facebook.com/healthc2u"><img class="button_3" src="img/SM-Icons-large/FB.png" alt="Facebook" width="30"></a>
+                                                    <a href="https://www.instagram.com/healthc2u/"><img class="button_3" src="img/SM-Icons-large/Insta.png" alt="Instagram" width="30"></a>
+                                                    <a href="https://twitter.com/Healthc2U"><img class="button_3" src="img/SM-Icons-large/Twitter.png" alt="Twitter" width="30"></a>
+                                                    <a href="https://www.youtube.com/@healthcare2u817"><img class="button_3"src="img/SM-Icons-large/YT.png" alt="Youtube" width="30"></a>
                                                 </td>
                                             </tr>
                                         </table>
@@ -828,8 +862,8 @@
                     <td>
                         <p style="font-size: 10px; text-align:center;">6101 W Courtyard Drive Building 5, Suite 210 Austin, Texas, 78730<br>
                         
-                        <a href="#">Privacy Policy</a><br>
-                        Please <a href="#">click here</a> to update your subscription preference.</p></td>
+                        <a href="https://healthc2u.com/npp-notice-privacy-practices-healthcare2u/?elqTrackId=9255453caee94642a9439e028b84fd45">Privacy Policy</a><br>
+                        Please <a href="https://go.healthc2u.com/subscription?elqTrackId=68ee0c6d169e41f6ad6ea4e1d12cbec8">click here</a> to update your subscription preference.</p></td>
                 </tr>
 
             </table>
