@@ -1,0 +1,748 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insight HTML Email Template</title>
+<style type="text/css">
+
+
+@import url(Fonts/Gotham/Gotham-Book.otf);
+@import url(Fonts/Gotham/Gotham-Bold.otf);
+@import url(Fonts/Gotham/Gotham-Medium.otf);
+@import url(Fonts/GothamNarrow/GothamNarrow-Book.otf);
+@import url(Fonts/GothamNarrow/GothamNarrow-Light.otf);
+
+	body {
+		margin: 0;
+		background-color: #cccccc;
+        line-height:1.5rem
+	}
+	table {
+		border-spacing: 0;
+	}
+	td {
+		padding: 0;
+	}
+	img {
+		border: 0;
+	}
+
+    img:hover {
+        opacity: 75%;
+    }
+
+    a {
+        color: 2191D0;
+        text-decoration: none;
+    }
+
+    .wrapper{
+    width: 100%;
+    table-layout: fixed;
+    background-color: #cccccc;
+    padding-bottom:60px;
+    }
+    .main {
+    background-color: #ffffff;
+    margin 0 auto;
+    width: 100%; 
+    max-width: 600px;
+    border-spacing: 0;
+    font-family: 'Gotham', sans-serif;
+    }
+
+    /* TYPOGRAPHY*/
+
+    h1 {
+    font-size: 45px;
+    font-family: Gotham Bold;
+    font-weight: 600;
+    }
+    h2 {
+        font-size: 36px;
+        font-weight: 600;
+    }
+    h3 {
+        font-size: 24px;
+        font-weight: 400;
+        font-family: 'Gotham Narrow'
+    }
+    h4 {
+        font-size: 20px;
+        font-weight: 500;
+    }
+    h5{
+        font-size: 18px;
+        text-transform:uppercase;
+        font-weight: 300;
+        font-family: 'Gotham Narrow';
+    }
+    h6 {
+        font-size: 14px;
+        font-weight: 600;
+        font-size: 14px;
+        color: #5C5D61;
+    }
+    p{
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    /* IMAGES*/
+    .articleimg{
+        width: 300px;
+        max-width: 300px;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .employeeimg {
+        width: 280px;
+        height: 185px;
+        object-fit:cover;
+    }
+
+    .headerimg{
+        width: 300px;
+        align-items: center;
+    }
+
+    .SM-icons{
+        display:flex; 
+        align-items: center; 
+        justify-content: space-around; 
+        padding:10px;
+    } 
+
+
+    .headerbg {
+    background-image: linear-gradient(to bottom, rgba(149, 212, 208, 21%), rgba(149, 212, 208, 1.0)), 
+    url('img/ATXSkylineHero.jpeg');
+    width: 100%; 
+    max-width: 600px; 
+    height: 300px;
+    background-size:cover;
+    color: #15345a;}
+
+    .textbanner{
+        background-image: linear-gradient(to right, #95D4D0, #15345A);
+        color: white;
+        line-height: 0px;
+    }
+
+    /* ARTICLE STYLING*/
+    .two-columns, .one-column{
+        font-size: 0;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .one-column .column{
+        width: 100%;
+        max-width: 600px;
+        vertical-align: top;
+        text-align: center;
+        display: inline-block;
+    }
+
+    .two-columns .column {
+        width: 100%;
+        max-width: 300px;
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+        padding: 15px ;
+    }
+
+    .two-columns .content, .one-column .content {
+        font-size: 16px;
+        text-align: left;
+        
+    }
+
+    #FAQ .content, #SM .content {
+        text-align:center;
+    }
+
+    #SM {
+        padding-top: 0px!important;
+        padding-left: 40px;
+    }
+
+    /* BUTTONS */
+
+    .hr {
+        width: 100%;
+        text-align: left;
+    }
+
+    button {
+        font-weight:500;
+        font-size: 1rem;
+        background: #9e3223;
+        color: #fff;
+        border: 1px solid #9e3223;
+        border-radius: 2px;
+        padding: 0.75em 0.75em;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        }
+    button:hover {
+        color: #9e3223;
+    }
+
+    button::after {
+        content: "";
+        background: #fff;
+        position: absolute;
+        z-index: -1;
+        padding: 0.75em 0.75em;
+        display: block;
+    }
+    button[class^="grow"]::after {
+        transition: all 0.3s ease;
+    }
+    button[class^="grow"]:hover::after {
+        transition: all 0.3s ease-out;
+    }
+    button.grow_box::after {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        transform: scale(0, 0);
+    }
+    button.grow_box:hover::after {
+        transform: scale(1, 1);
+    }
+
+
+/* 
+    .button_1 {
+        background-color: #9e3223;
+        color: white; 
+        padding: 10px 15px;
+        border: #9e3223 solid 1px;
+        border-radius: 2px;
+        text-decoration: none;
+        font-weight:500;
+    }
+    .button_1:hover {
+        background-color: white;
+        color: #9e3223; 
+        padding: 10px 15px;
+        border: #9e3223 solid 1px;
+        border-radius: 3px;
+        text-decoration: none;
+        transition-duration: 0.2s;
+    }
+*/ 
+    .button_2 {
+        background-color: #95D4D0;
+        color: #15345a; 
+        border-radius: 2px;
+        padding: 0.75em 0.75em;
+        border: #95D4D0 solid 1px;
+        font-weight:500;
+        font-size: 1rem;
+        text-decoration: none;
+    }
+    .button_2:hover {
+        background-color: white;
+        color: #15345a; 
+        border-radius: 2px;
+        padding: 0.75em 0.75em;
+        border: #95D4D0 solid 1px;
+        text-decoration: none;
+        transition-duration: 0.4s;
+        box-shadow: 4px 4px #95D4D0;
+    }
+    .button_3 {
+        border-radius: 3px;
+    }
+    .button_3:hover {
+        box-shadow: 2px 2px #ffffff;
+        border-radius: 2px;
+    }
+
+    .firstandlast {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .firstandlast label, input {
+        padding: 10px;
+        text-align: left;
+        display:flex;
+        flex-direction: column;
+    }
+
+    /* RESPONSIVE DESIGN */
+    @media screen and (max-width:600px){
+        .two-columns, .one-column{
+        padding:0px!important;
+        }
+        .two-columns .padding{
+        padding-right:0!important;
+        padding-left:0!important;
+        padding-top:10px!important;
+        padding-bottom:10px!important;
+        }
+        .one-column .padding{
+        padding-right:0!important;
+        padding-left:0!important;
+        padding-top:10px!important;
+        padding-bottom:10px!important;
+        }
+        .articleimg, .employeeimg {
+        width: 300px!important;
+        height: 200px!important;
+        max-width: 300px!important;
+        object-fit:cover;
+        }
+
+        .two-columns .column {
+        width: 100%!important;
+        max-width: 300px!important;
+        padding: 0!important;
+        }
+
+        #FAQ {
+            padding:10px!important;
+        }
+
+        .one-column .column {
+        width: 100%!important;
+        max-width: 300px!important;
+        padding: 0!important;
+        }
+        .button_3{
+            padding:10px!important;
+            height: 50px!important;
+            width:50px!important;
+        }
+        #SM{
+        padding: 40px!important;
+        height:fit-content!important;
+        }
+        .SM-icons{
+        display:flex; 
+        flex-direction: column;
+        align-items: center; 
+        padding:10px;
+        } 
+    }
+
+    </style>
+    </head>
+
+    <body>
+    <!--Here is where the actual content goes-->
+
+    <center class="wrapper">
+        <table class="main" role="presentation" border="0" cellspacing="0" width="100%">
+
+            <tr>
+                <td style="text-align: right; font-size:10px"><a href="#">Click to view in browser</a></td>
+            </tr>
+    <!-- TOP BLUE BORDER -->
+        <tr>
+            <td height="8px" style="background-color: #15345A;"></td>
+        </tr>
+
+
+    <!-- HEADER SECTION -->
+    
+        <tr>
+            <td align="center" width="600">
+            <a href="https://healthc2u.com/"><img class="headerimg" src="img/Header-Color-Large copy.png" alt="Healthcare2U logo and tagline"></a>
+            </td>
+        </tr>
+
+
+    <!-- HERO IMAGE, TITLE, SUBTITLE-->
+        <tr>
+            <td class="headerbg" width="600px" max-width="100%" height="300px;" style="text-align: center; vertical-align: bottom;">
+            <h1>THE PRIMARY</h1>
+            <h3>Your Source for Direct Primary Care News</h3>
+            </td>
+        </tr>
+
+
+
+    <!-- ISSUE DATE BANNER-->
+        <tr>
+            <td>
+            <table role="presentation" border="0" cellspacing="0" width="100%">
+                
+                <tr>
+                <td class="textbanner" style="text-align: center;">
+                    <p>Issue Date</p>
+                </td>
+                </tr>
+
+            </table>
+            </td>
+        </tr>
+
+
+    <!-- ARTICLES -->
+
+    <!--Odd # Article IMG on top-->
+        <tr>
+            <td>
+            <table role="presentation" border="0" cellspacing="0" width="100%" >
+                <tr>
+                <td class="one-column">
+                    <table class= "column" style="max-width: 560px;">
+                    <tr>
+                        <td class="padding">
+                        <table class="content" border="0">
+                            <!--IMG-->
+                            <tr>
+                            <td>
+                                <a href="#"><img src="img/ATXSkylineHero.jpeg"
+                                width="560px" style="max-width:100%;"></a>
+                            </td>
+                            </tr>
+                            <!--Subject + Read Time-->
+                            <tr>
+                            <td>
+                                <table role="presentation" border="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <td width="60%"><h5 style="color:#9e3223">Subject</h5></td>
+                                    <td style="text-align:right;" width="40%"><h6>Read Time</h6></td>
+                                </tr>
+                                
+                                </table>
+                                
+                            </td>
+                            </tr>
+                            <!--Title & Description-->
+                            <tr>
+                            <td>
+                                <h4>Title</h4>
+                                <p style="padding-bottom:15px;">Description</p>
+                            </td>
+                            </tr>
+                            <!--Button-->
+                            <tr class="hr" >
+                                <td>
+                                    <button class="grow_box">Learn More</button>
+                                </td>
+                            </tr>
+                        </table>
+                        </td>
+                    </tr>
+                    </table>
+                </td>
+                </tr>
+            </table>
+            </td>
+        </tr>
+
+
+
+    <!-- TWO COLUMN SECTION -->
+        <tr>
+            <td>
+            <table role="presentation" border="0" cellspacing="0" width="100%">
+                <tr>
+                <td class="two-columns">
+
+                    <!-- Article 1 (if even # articles)-->
+                    <table class="column">
+                    <tr>
+                        <td class="padding">
+                        <table class="content" border="0" width="100%">
+
+                            <!--IMG-->
+                            <tr>
+                            <td>
+                                <a href="#"><img class="articleimg" src="https://dummyimage.com/300x200/000/5c5d61"
+                                    alt="" width="260px" style="max-width:260px;"></a>
+                            </td>
+                            </tr>
+
+                            <!--Subject + Read Time-->
+                            <tr>
+                            <td>
+                                <table role="presentation" border="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <td class="subject"><h5 style="color:#9e3223">Subject</h5></td>
+                                    <td style="text-align:right"><h6>Read Time</h6></td>
+                                </tr>
+                                </table>
+                            </td>
+                            </tr>
+
+                            <!--Title & Description-->
+                            <tr>
+                            <td>
+                                <h4>Title</h4>
+                                <p style="padding-bottom:15px;">Description</p>
+                            </td>
+                            </tr>
+
+                            <!--Button-->
+                            <tr class="hr" >
+                                <td>
+                                    <button class="grow_box">Learn More</button>
+                                </td>
+                            </tr>
+                        </table>
+                        </td>
+                        </tr>
+                    </table>
+                    <!-- End of Article 1-->
+
+                    <!-- Article 2-->
+                    <table class="column" >
+                        <tr>
+                        <td class="padding">
+                            <table class="content" border="0">
+    
+                            <!--IMG-->
+                            <tr>
+                                <td>
+                                    <a href="#"><img class="articleimg" src="https://dummyimage.com/300x200/000/5c5d61"
+                                    alt="" width="260px" style="max-width:260px;"></a>
+                                </td>
+                            </tr>
+    
+                            <!--Subject + Read Time-->
+                            <tr>
+                                <td>
+                                <table role="presentation" border="0" cellspacing="0" width="100%">
+                                    <tr>
+                                    <td class="subject"><h5 style="color:#9e3223">Subject</h5></td>
+                                    <td style="text-align:right"><h6>Read Time</h6></td>
+                                    </tr>
+                                </table>
+                                </td>
+                            </tr>
+    
+                            <!--Title & Description-->
+                            <tr>
+                                <td>
+                                <h4>Title</h4>
+                                <p style="padding-bottom:15px;">Description</p>
+                                </td>
+                            </tr>
+    
+                            <!--Button-->
+                            <tr class="hr" >
+                                <td>
+                                    <button class="grow_box">Learn More</button>
+                                </td>
+                            </tr>
+                        </table>
+                        </td>
+                        </tr>
+                    </table>
+                        <!-- End of Article 2-->
+                    </td>
+                </tr>
+            </table>
+            </td>
+        </tr>
+
+    <!--Here is where you would copy & paste the next set of articles from above-->
+
+
+
+    <!--EMPLOYEE SPOTLIGHT SECTION-->
+        <tr >
+        <td style="padding-top:20px">
+            <table width="100%">
+            <tr>
+                <td>
+                    <table width="570px" style="margin:0 auto; ">
+                        <tr>
+                            <td class="textbanner" style="text-align: center;">
+                                <h2>Employee Spotlight</h2>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="two-columns">
+                <!--IMG-->
+                <table class="column">
+                    <tr>
+                    <td class="padding">
+                        <table class="content">
+                        <tr>
+                            <td>
+                            <a href="#"><img class="employeeimg" src="https://dummyimage.com/300x200/000/5c5d61"
+                            alt="" width="300px" style="max-width:300px; height:200px"></a>
+                            </td>
+                        </tr>
+                        </table>
+                    </td>
+                    </tr>
+                </table>
+                <!--About-->
+                <table class="column">
+                    <tr>
+                    <td class="padding">
+                        <table class="content" border="0">
+                        <tr>
+                            <td style="vertical-align:middle; line-height:10%; height:200px; width: 300px; max-width:300px; text-align: left;" >
+                            <h4>First <strong style="color:#9e3223"> Last</strong></h4>
+                            <h5>Position</h5>
+                            <p>Description</p>
+                            </td>
+                        </tr>
+                        </table>
+                    </td>
+                    </tr>
+                </table>
+
+                </td>
+            </tr>
+            </table>
+        </td>
+        </tr>
+
+
+    <!--NEWSROOM -->
+        <tr>
+            <td>
+                <table width="100%">
+                    <tr>
+                        <td class="one-column">
+                            <table class="column" border="0" style="max-width: 560px;" >
+                                <tr>
+                                    <td class="padding" style="padding:0 65px">
+                                        <table class="content" style="text-align:center;" >
+                                            <tr>
+                                                <td>
+                                                    <h4>Check Out Our <strong style="color:#9e3223">Newsroom</strong></h4>
+                                                    <p>Stay informed with our latest blogs and news releases!</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding:10px">
+                                                    <a class="button_2" href="#">Newsroom</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        
+                                    </td>
+                                </tr>
+                                <!--Button-->
+                                
+                        
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+   
+
+
+
+    <!--FAQ + SM -->
+        <tr>
+            <td>
+                <table width="100%">
+                    <tr>
+                        <td class="two-columns">
+                            <!--FAQ-->
+                            <table class="column" id="FAQ" style="background-color: #15345a; height:250px" border="0">
+                                <tr>
+                                <td class="padding" style="padding-top:15px">
+                                    <table class="content">
+                                    <tr>
+                                        <td style="color:white">
+                                            <h4>Not sure what Direct Primary Care is?</h4>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="color:white">
+                                            <p>Check out our FAQ</p>
+                                        </td>
+                                    </tr>
+                                    <!--Button-->
+                                    <tr>
+                                        <td style="padding:10px">
+                                            <a class="button_2" href="#">Download FAQ</a>
+                                        </td>
+                                    </tr>
+                                    </table>
+                                </td>
+                                </tr>
+                            </table>
+
+                        
+                            
+                            <!--SM-->
+                            <table class="column" id="SM" style="background-color: #95D4D0; height:250px" border="0" >
+                                <tr>
+                                    <td class="padding" style="padding-top:0px">
+                                        <table class="content" width="100%">
+                                            <tr>
+                                                <td>
+                                                    <h4 style="color:#15345A;">Join the conversation</h4>
+                                                    <p>Visit us on the web</p>
+                                                    <tr class="hr" style="text-align: center;">
+                                                        <td>
+                                                            <button class="grow_box">Our Website</button>
+                                                        </td>
+                                                    </tr>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p style="line-height:10px">Follow us on social media</p>
+                                                </td>
+                                            </tr>
+                                            <!--Links-->
+                                            <tr style="text-align:center; padding: 0px;">
+                                                <td class="SM-icons">
+                                                    <a href=""><img class="button_3" src="img/SM-Icons-large/LinkedIn.png" alt="LinkedIn" width="30"></a>
+                                                    <a href=""><img class="button_3" src="img/SM-Icons-large/FB.png" alt="Facebook" width="30"></a>
+                                                    <a href=""><img class="button_3" src="img/SM-Icons-large/Insta.png" alt="Instagram" width="30"></a>
+                                                    <a href=""><img class="button_3" src="img/SM-Icons-large/Twitter.png" alt="Twitter" width="30"></a>
+                                                    <a href=""><img class="button_3"src="img/SM-Icons-large/YT.png" alt="Youtube" width="30"></a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+    <!-- FOOTER SECTION -->
+        <tr>
+        <td>
+            <table role="presentation" border="0" cellspacing="0" width="100%">
+                <tr>
+                    <td>
+                        <p style="font-size: 10px; text-align:center;">6101 W Courtyard Drive Building 5, Suite 210 Austin, Texas, 78730<br>
+                        
+                        <a href="#">Privacy Policy</a><br>
+                        Please <a href="#">click here</a> to update your subscription preference.</p></td>
+                </tr>
+
+            </table>
+        </td>
+        </tr>       
+
+    </table>
+</center>
+
+    </body>
+    </html>
+
